@@ -1,0 +1,25 @@
+.movies-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.example-card {
+  max-width: 400px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.actors-list {
+  display: flex;
+  flex-direction: row;
+}
+.actors-list > * {
+  margin-right: 10px;
+}

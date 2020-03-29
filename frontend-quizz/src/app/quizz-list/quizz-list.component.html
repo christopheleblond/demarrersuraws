@@ -1,0 +1,12 @@
+Select your quizz !
+
+<mat-list>
+  <h3 mat-subheader>Quizz</h3>
+  <mat-list-item *ngFor="let q of quizzs$ |async">
+    <mat-icon mat-list-icon>folder</mat-icon>
+
+    <button mat-raised-button [routerLink]="q.id"><h4 mat-line>{{q.title}}</h4></button>
+    <p mat-line> </p>
+  </mat-list-item>
+</mat-list>
+

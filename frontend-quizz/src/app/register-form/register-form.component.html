@@ -1,0 +1,9 @@
+<form [formGroup]="registerForm" (ngSubmit)="registerUser()">
+
+  <mat-form-field>
+    <mat-label>Pseudo</mat-label>
+    <input matFormFieldName="username" formControlName="username" name="username" matInput placeholder="Pseudo">
+  </mat-form-field>
+
+  <button type="submit" mat-raised-button [disabled]="!registerForm.valid" color="primary">Start</button>
+</form>

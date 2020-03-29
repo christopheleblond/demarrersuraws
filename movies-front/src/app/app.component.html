@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+  <span class="app-title">MoviZ'</span>
+  <!-- This fills the remaining space of the current row -->
+  <form class="example-form" [formGroup]="searchForm">
+    <mat-form-field class="full-width">
+      <mat-label><mat-icon>search</mat-icon> Search</mat-label>
+      <input class="search" matInput placeholder="Ex. Star wars" value="" formControlName="search">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Sort by</mat-label>
+      <select matNativeControl required formControlName="sort">
+        <option value="title">Title</option>
+        <option value="years">Release year</option>
+        <option value="rating">Star</option>
+      </select>
+    </mat-form-field>
+
+  </form>
+</mat-toolbar>
+
+<div *ngIf="state === 'BACKEND_DOWN'">
+  No backend
+</div>
+
+<app-movies-list *ngIf="state === 'BACKEND_UP'" [movies]="results$ |async"></app-movies-list>
